@@ -1,0 +1,63 @@
+/**
+ * Design tokens.
+ *
+ * Keep this file in sync with the Figma variables / styles of the mobile
+ * redesign file. One CSS custom property per Figma variable, using the same
+ * naming as in Figma so a token can be traced back to its source.
+ */
+:root {
+  /* Color — primitives */
+  --color-brand-500: #2f6bff;
+  --color-brand-600: #1f4fd6;
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f6f7f9;
+  --color-neutral-100: #ebedf1;
+  --color-neutral-400: #9aa1ad;
+  --color-neutral-700: #40464f;
+  --color-neutral-900: #14181f;
+  --color-accent-500: #ff8a3d;
+
+  /* Color — semantic */
+  --color-background: var(--color-neutral-50);
+  --color-surface: var(--color-neutral-0);
+  --color-border: var(--color-neutral-100);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-muted: var(--color-neutral-400);
+  --color-text-on-brand: var(--color-neutral-0);
+
+  /* Typography */
+  --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', roboto,
+    sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+
+  /* Spacing — 4pt scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 2px 8px rgb(20 24 31 / 8%);
+  --shadow-raised: 0 -2px 12px rgb(20 24 31 / 8%);
+
+  /* Layout */
+  --layout-max-width: 430px; /* iPhone 15 Pro Max frame width in Figma */
+}

@@ -1,0 +1,103 @@
+.homepage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.homepage__header {
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  background: var(--color-surface);
+}
+
+.homepage__greeting {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.homepage__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.homepage__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-4);
+}
+
+.homepage__hero {
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-brand-500);
+  color: var(--color-text-on-brand);
+  box-shadow: var(--shadow-card);
+}
+
+.homepage__hero-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.homepage__hero-body {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.homepage__section-title {
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.homepage__actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.homepage__action {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+.homepage__nav {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-raised);
+}
+
+.homepage__nav-item {
+  flex: 1;
+  min-height: 44px;
+  padding: var(--space-2);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.homepage__nav-item--active {
+  background: var(--color-neutral-50);
+  color: var(--color-brand-600);
+  font-weight: var(--font-weight-medium);
+}
