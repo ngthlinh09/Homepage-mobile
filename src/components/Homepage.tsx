@@ -14,6 +14,8 @@ const navItems = [
   { id: 'profile', label: 'Profile' },
 ]
 
+const activeNavItem = 'home'
+
 /**
  * Starting point for the mobile homepage redesign.
  *
@@ -45,8 +47,10 @@ export function Homepage() {
           </h2>
           <ul className="homepage__actions">
             {quickActions.map((action) => (
-              <li className="homepage__action" key={action.id}>
-                {action.label}
+              <li key={action.id}>
+                <button className="homepage__action" type="button">
+                  {action.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -55,7 +59,16 @@ export function Homepage() {
 
       <nav className="homepage__nav" aria-label="Primary">
         {navItems.map((item) => (
-          <button className="homepage__nav-item" key={item.id} type="button">
+          <button
+            aria-current={item.id === activeNavItem ? 'page' : undefined}
+            className={
+              item.id === activeNavItem
+                ? 'homepage__nav-item homepage__nav-item--active'
+                : 'homepage__nav-item'
+            }
+            key={item.id}
+            type="button"
+          >
             {item.label}
           </button>
         ))}

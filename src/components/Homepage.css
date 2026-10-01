@@ -63,12 +63,14 @@
 }
 
 .homepage__action {
+  width: 100%;
   padding: var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+  text-align: left;
 }
 
 .homepage__nav {
@@ -93,7 +95,7 @@
   font-size: var(--font-size-xs);
 }
 
-.homepage__nav-item:first-child {
+.homepage__nav-item--active {
   background: var(--color-neutral-50);
   color: var(--color-brand-600);
   font-weight: var(--font-weight-medium);
