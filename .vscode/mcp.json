@@ -1,0 +1,58 @@
+{
+	"servers": {
+		"aileron-mcp-server": {
+			"type": "stdio",
+			"command": "docker",
+			"args": [
+				"run",
+				"-i",
+				"--rm",
+				"node",
+				"dist/index.js",
+				"-e",
+				"GITHUB_TOKEN",
+				"-e",
+				"GITHUB_BRANCH",
+				"docker.aa.com/nonprod/aileron-mcp-server:latest"
+			],
+			"env": {
+				"GITHUB_TOKEN": "${input:github_token}",
+				"GITHUB_BRANCH": "main"
+			},
+			"gallery": "https://aa-mcp-registry.cloud.aa.com",
+			"version": "1.0.0"
+		},
+		"figma-npm": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"figma-developer-mcp",
+				"--stdio"
+			],
+			"gallery": "https://aa-mcp-registry.cloud.aa.com",
+			"version": "1.0.0"
+		}
+	},
+	"inputs": [
+		{
+			"id": "github_token",
+			"type": "promptString",
+			"description": "GitHub Personal Access Token",
+			"password": true
+		}
+	]
+}
+# Clone repository
+git clone https://github.com/AAInternal/aileron.git
+cd aileron
+
+# Login to npm with access token
+npm login
+
+# Or add this to .npmrc
+registry=https://npm.aa.com/nonprod/
+//npm.aa.com/nonprod/:_authToken=${AA_API_KEY}
+
+# Install dependencies
+npm install
