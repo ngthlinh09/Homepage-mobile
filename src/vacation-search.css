@@ -1,0 +1,18 @@
+.travel-chip.selected[data-category='vacations'] { background: var(--link-color); color: white; }
+.flight-booking-form[hidden], .vacation-search[hidden] { display: none !important; }
+.vacation-search { display: flex; flex-direction: column; gap: 16px; min-width: 0; padding-top: 12px; }
+.vacation-search > * { flex-shrink: 0; }
+.vacation-search .route-field { margin-top: 0; }
+.vacation-search .route-fields .swap-button .icon-only-content { width: 32px; height: 32px; }
+.vacation-search .date-field .aileron-date-input__input:placeholder-shown { width: 6.5ch !important; }
+.vacation-search .booking-select { padding-block: 8px; }
+.vacation-select-content { flex: 1; min-width: 0; }
+.vacation-select-label { display: block; color: var(--text-secondary); font-size: 14px; line-height: 20px; }
+.vacation-search .booking-select .aileron-select__input { height: 24px; line-height: 24px; }
+.vacation-search .demo-result { margin-top: 0; }
+.vacation-search .demo-result a { gap: 6px; }
+.vacation-search-footer { padding-top: 4px; }
+.vacation-search .vacation-search-submit .button { height: 48px; min-height: 48px; border-radius: 16px; font-size: 16px; font-weight: 700; font-variation-settings: 'wght' 700; }
+.vacation-external-icon { width: 16px; height: 16px; filter: brightness(0) invert(1); }
+.v3-book-panel > .vacation-search { gap: 16px; }
+.v3-book-panel .vacation-search-footer { position: sticky; bottom: 0; z-index: 2; margin-top: auto; padding-block: 16px max(16px, env(safe-area-inset-bottom)); background: white; }

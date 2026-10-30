@@ -1,0 +1,86 @@
+/* Input field components: Figma "Input fields" (5581:37299) and "Date picker" (5581:37608). */
+.route-field { margin-top: 12px; }
+.route-fields { display: flex; align-items: center; gap: 8px; height: 66px; padding: 0; border: 1px solid var(--border-color); border-radius: var(--ads-border-radius-container-lg, 16px); background: var(--ads-color-light-bg-page-main, white); }
+.route-fields .swap-button { position: relative; z-index: 1; width: 40px; height: 40px; min-width: 40px; padding: 0; }
+.route-fields .swap-button .button { width: 40px; height: 40px; padding: 4px; color: var(--link-color); }
+.route-swap-icon { display: block; flex-shrink: 0; width: 32px; height: 32px; background: currentColor; mask: url('/assets/aileron/icons/navigation/arrow-double-horizontal.svg') center / 32px 32px no-repeat; }
+
+.airport-field { position: relative; isolation: isolate; display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 2px; min-width: 0; height: 100%; padding: 8px 16px; cursor: text; }
+.airport-field-from { padding-inline: 20px 8px; }
+.airport-field-to { padding-right: 12px; }
+.airport-field::before, .airport-field::after { content: ''; position: absolute; z-index: -1; pointer-events: none; }
+.airport-field-from::before { border-radius: 15px 12px 12px 15px; }
+.airport-field-to::before { border-radius: 12px 15px 15px 12px; }
+.airport-field:hover::before { inset: 0; background: var(--ads-color-light-bg-fill-hover, #e0f2ff); }
+.airport-field[data-invalid='true']::before { inset: -1px; border: 1px solid var(--ads-color-light-border-error, #d6001b); border-radius: 16px; background: var(--ads-color-light-bg-page-main, white); }
+.airport-field:focus-within::before { inset: -1px; border: 2px solid var(--ads-color-light-outline-focus, #006dc0); border-radius: 16px; background: var(--ads-color-light-bg-page-main, white); }
+.airport-field:focus-within::after { inset: 5px; border: 1px solid var(--ads-color-light-border-selected, #0090fb); border-radius: 12px; }
+.airport-field:active::after { inset: 5px; border: 1px solid var(--ads-color-light-border-primary, #869199); border-radius: 12px; background: var(--ads-color-light-bg-fill-active, #d6edff); }
+
+.airport-field-label { display: flex; align-items: center; gap: 4px; min-width: 0; overflow: hidden; color: var(--text-secondary); font-size: 14px; line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.airport-field-value { display: flex; align-items: center; gap: 6px; min-width: 0; color: var(--ads-color-light-text-primary, #1b1f23); }
+.airport-field[data-raised='false'] .airport-field-value { gap: 4px; }
+.airport-field-sizer { display: inline-grid; flex: 0 1 auto; min-width: 0; }
+.airport-field[data-raised='false'] .airport-field-sizer, .airport-field[data-focused='true'] .airport-field-sizer { flex: 1; }
+.airport-field-sizer::after { content: attr(data-value); grid-area: 1 / 1; height: 0; overflow: hidden; visibility: hidden; white-space: pre; font-size: 20px; font-weight: 700; font-variation-settings: 'wght' 700; }
+.airport-field input { grid-area: 1 / 1; width: 100%; min-width: 1ch; height: 28px; padding: 0; border: 0; outline: none; background: transparent; color: inherit; font-size: 20px; line-height: 28px; font-weight: 700; font-variation-settings: 'wght' 700; text-overflow: ellipsis; }
+.airport-field[data-raised='false'] input { height: 26px; font-size: 18px; line-height: 26px; font-weight: 400; font-variation-settings: 'wght' 400; }
+.airport-field input::placeholder { color: var(--text-secondary); opacity: 1; }
+.airport-field-city { flex: 1; min-width: 0; overflow: hidden; font-size: 14px; line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.field-error-icon { display: inline-flex; flex-shrink: 0; color: var(--ads-color-light-text-error, #d6001b); }
+.route-field-captions { display: grid; grid-template-columns: 1fr 40px 1fr; column-gap: 8px; margin-top: 8px; color: var(--ads-color-light-text-error, #d6001b); font-size: 12px; line-height: 16px; }
+.route-field-captions p { min-width: 0; }
+.route-field-captions p:last-child { grid-column: 3; }
+
+.date-field { position: relative; min-width: 0; }
+.date-field .aileron-date-input__label-wrapper { position: absolute; z-index: 1; top: 9px; left: 17px; right: 60px; width: auto; min-width: 0; height: 20px; margin: 0; pointer-events: none; }
+.date-field:not(.aileron-date-input--error):not(:has(.aileron-date-input__input:not(:placeholder-shown))) .aileron-date-input__label-wrapper { right: auto; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.date-field .aileron-date-input__label { gap: 4px; color: var(--text-secondary); font-size: 14px; line-height: 20px; font-weight: 400; font-variation-settings: 'wght' 400; }
+.date-field .aileron-date-input__label .icon-host { width: 16px; height: 16px; background: var(--ads-color-light-text-error, #d6001b); mask: url('/assets/aileron/icons/signal/outlined/error.svg') center / 16px 16px no-repeat; }
+.date-field .aileron-date-input__label .icon-host > * { display: none; }
+
+.date-field .aileron-date-input__wrapper { position: relative; isolation: isolate; align-items: center; height: 66px; min-height: 66px; padding: 8px 16px; overflow: clip; border: 1px solid var(--border-color); border-radius: var(--ads-border-radius-container-lg, 16px); background: var(--ads-color-light-bg-page-main, white); }
+.date-field.aileron-date-input--error .aileron-date-input__wrapper,
+.date-field:has(.aileron-date-input__input:not(:placeholder-shown)) .aileron-date-input__wrapper { align-items: flex-end; }
+.date-field:not(.aileron-date-input--focused) .aileron-date-input__wrapper:hover { background-color: var(--ads-color-light-bg-fill-hover, #e0f2ff); }
+.date-field .aileron-date-input__wrapper::before { content: ''; position: absolute; inset: 4px; z-index: -1; border: 1px solid transparent; border-radius: 12px; pointer-events: none; }
+.date-field.aileron-date-input--focused .aileron-date-input__wrapper,
+.date-field.aileron-date-input:not(.aileron-date-input--focused):not(.aileron-date-input--disabled):not(.aileron-date-input--readonly) .aileron-date-input__wrapper:active:hover { padding: 7px 15px; border: 2px solid var(--ads-color-light-outline-focus, #006dc0); border-radius: var(--ads-border-radius-container-lg, 16px); outline: none; background-color: var(--ads-color-light-bg-page-main, white) !important; }
+.date-field.aileron-date-input--focused .aileron-date-input__wrapper::before { border-color: var(--ads-color-light-border-selected, #0090fb); }
+.date-field .aileron-date-input__wrapper:active::before { border-color: var(--border-color); background: var(--ads-color-light-bg-fill-hover, #e0f2ff); }
+.date-field.aileron-date-input--error:not(.aileron-date-input--focused) .aileron-date-input__wrapper:not(:active) { border-color: var(--ads-color-light-border-error, #d6001b) !important; }
+
+.date-field .aileron-date-input__input { height: 28px; min-height: 0; color: var(--text-secondary); font-size: 18px; line-height: 28px; font-weight: 400; font-variation-settings: 'wght' 400; }
+.date-field .aileron-date-input__input:not(:placeholder-shown) { height: 24px; color: var(--ads-color-light-text-primary, #1b1f23) !important; font-size: 16px; line-height: 24px; font-weight: 500; font-variation-settings: 'wght' 500; }
+.date-field .aileron-date-input__input:placeholder-shown { color: var(--text-secondary) !important; }
+@supports (field-sizing: content) {
+  .date-field .aileron-date-input__input:not(:placeholder-shown) { width: auto !important; field-sizing: content; }
+}
+.date-field:has(.aileron-date-input__input:not(:placeholder-shown)) .aileron-date-input__range-separator { align-items: center; justify-content: center; width: 8px; height: 24px; color: var(--ads-color-light-text-primary, #1b1f23); }
+.date-field:has(.aileron-date-input__input:not(:placeholder-shown)) .aileron-date-input__range-separator > .aileron-date-input__dash { left: 0; width: 5px; height: 1px; background: currentColor; }
+.date-field .aileron-date-input__calendar-button { position: static; align-self: center; width: 36px; height: 36px; padding: 6px; margin-left: auto; transform: none; color: var(--link-color); }
+.date-field .aileron-date-input__error-message { margin-top: 8px; color: var(--ads-color-light-text-error, #d6001b); font-size: 12px; line-height: 16px; }
+
+/* Text field: the same container states as the date field, with a floating label once raised. */
+.text-field { min-width: 0; }
+.text-field-box { position: relative; isolation: isolate; display: flex; align-items: center; gap: 8px; height: 66px; padding: 8px 16px; border: 1px solid var(--border-color); border-radius: var(--ads-border-radius-container-lg, 16px); background: var(--ads-color-light-bg-page-main, white); cursor: text; }
+.text-field-box::before { content: ''; position: absolute; inset: 4px; z-index: -1; border: 1px solid transparent; border-radius: 12px; pointer-events: none; }
+.text-field-box:hover { background: var(--ads-color-light-bg-fill-hover, #e0f2ff); }
+.text-field-box:is(:focus-within, :active:not(:has(button:active))) { padding: 7px 15px; border: 2px solid var(--ads-color-light-outline-focus, #006dc0); background: var(--ads-color-light-bg-page-main, white); }
+.text-field-box:focus-within::before { border-color: var(--ads-color-light-border-selected, #0090fb); }
+.text-field-box:active:not(:has(button:active))::before { border-color: var(--border-color); background: var(--ads-color-light-bg-fill-hover, #e0f2ff); }
+.text-field[data-invalid='true'] .text-field-box:not(:focus-within):not(:active) { border-color: var(--ads-color-light-border-error, #d6001b); }
+.text-field-content { display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+.text-field-label { display: flex; align-items: center; gap: 4px; min-width: 0; overflow: hidden; color: var(--text-secondary); font-size: 14px; line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.text-field-value { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.text-field input { flex: 1; width: 0; min-width: 0; height: 24px; padding: 0; border: 0; outline: none; background: transparent; color: var(--ads-color-light-text-primary, #1b1f23); font-size: 16px; line-height: 24px; font-weight: 500; font-variation-settings: 'wght' 500; text-overflow: ellipsis; }
+.text-field[data-raised='false'] input { height: 28px; font-size: 18px; line-height: 28px; font-weight: 400; font-variation-settings: 'wght' 400; }
+.text-field input::placeholder { color: var(--text-secondary); opacity: 1; }
+.text-field-box > .ads-field-trailing, .text-field-box > .button-host, .text-field-box > button { flex-shrink: 0; }
+.text-field-caption { margin-top: 8px; color: var(--ads-color-light-text-error, #d6001b); font-size: 12px; line-height: 16px; }
+.trip-last-name-field .text-field-box { padding-right: 8px; }
+.trip-last-name-field .text-field-box:is(:focus-within, :active:not(:has(button:active))) { padding-right: 7px; }
+/* ADS shows a date-format placeholder for single dates, so keep the label raised to name the field. */
+.date-field.status-date-picker .aileron-date-input__label-wrapper { right: 60px !important; width: auto !important; height: 20px !important; overflow: visible !important; clip-path: none !important; }
+.date-field.status-date-picker .aileron-date-input__wrapper { align-items: flex-end; }
+.date-field.status-date-picker .aileron-date-input__input:placeholder-shown { height: 24px; font-size: 16px; line-height: 24px; }

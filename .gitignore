@@ -1,1 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+test-results/
+playwright-report/
 .DS_Store
+
+# Local and generated files
+.DS_Store
+.vite/
+dist/
+node_modules/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.env
+.env.*

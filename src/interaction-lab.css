@@ -1,0 +1,32 @@
+.interaction-lab { display: grid; grid-template-columns: 272px 390px; justify-content: center; align-items: start; gap: 40px; padding: 32px 16px; font-family: 'AmericanSans Var', Arial, sans-serif; }
+.interaction-study-controls { position: sticky; top: 24px; color: #182b3e; }
+.interaction-study-eyebrow { margin-bottom: 12px; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: 1px; color: #5e6d7a; }
+.interaction-study-controls h1 { margin: 0 0 24px; font-size: 28px; line-height: 34px; font-weight: 500; }
+.interaction-study-picker { display: grid; gap: 6px; }
+.interaction-version-picker { margin-bottom: 16px; }
+.interaction-study-picker label { font-size: 12px; line-height: 18px; font-weight: 700; }
+.interaction-study-picker select { width: 100%; height: 44px; border: 1px solid #d0dae0; border-radius: 8px; padding: 0 12px; background: white; color: #182b3e; font: inherit; font-size: 15px; }
+.interaction-study-instruction { margin: 16px 0; min-height: 48px; font-size: 16px; line-height: 24px; }
+.interaction-study-actions { display: grid; gap: 8px; }
+.interaction-study-actions button { height: 44px; padding: 0 16px; border: 1px solid #d0dae0; border-radius: 8px; background: white; color: #182b3e; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; }
+.interaction-study-actions button:hover { background: #eaf6ff; }
+.interaction-study-actions a { display: inline-flex; align-items: center; min-height: 36px; font-size: 14px; color: #006dc0; }
+.interaction-study-state { margin: 12px 0 24px; font-size: 12px; line-height: 18px; color: #5e6d7a; }
+.interaction-study-notes { border-top: 1px solid #d0dae0; padding-top: 16px; }
+.interaction-study-notes h2 { margin: 0 0 4px; font-family: 'AmericanSans Var', Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: 700; }
+.interaction-study-notes p { margin: 0 0 16px; font-size: 14px; line-height: 21px; color: #5e6d7a; }
+.interaction-study-notes .interaction-study-scope { margin-bottom: 0; font-size: 12px; line-height: 18px; }
+.interaction-study-prototype { min-width: 0; }
+
+@media (max-width: 767px) {
+  .interaction-lab { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; }
+  .interaction-study-controls { position: static; width: 100%; max-width: 480px; margin: 0 auto; padding: 16px; border-bottom: 1px solid #d0dae0; background: #f3f5f7; }
+  .interaction-study-eyebrow { margin-bottom: 4px; }
+  .interaction-study-controls h1 { margin-bottom: 12px; font-size: 22px; line-height: 28px; }
+  .interaction-study-controls h1 br { display: none; }
+  .interaction-study-instruction { min-height: 0; margin: 12px 0; font-size: 14px; line-height: 20px; }
+  .interaction-study-actions { grid-template-columns: 1fr 1fr; align-items: center; gap: 12px; }
+  .interaction-study-actions a { font-size: 12px; }
+  .interaction-study-state { margin: 8px 0 0; }
+  .interaction-study-notes { display: none; }
+}

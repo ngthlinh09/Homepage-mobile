@@ -1,0 +1,50 @@
+.booking-layout-v3 { background: var(--ads-color-light-bg-surface-alt, #f9fafb); }
+.booking-layout-v3 .travel-alerts { padding-bottom: 8px; }
+.booking-section-v3 { padding: 0; box-shadow: none; }
+.v3-compact-booking { padding: 24px 16px 16px; background: white; }
+.v3-compact-booking h2, .v3-search-heading h2 { font-family: var(--ads-font-family-americansans-var), Arial, sans-serif; font-size: 16px; line-height: 24px; font-weight: 700; font-variation-settings: 'wght' 700; }
+.v3-compact-booking h2:focus, .v3-search-heading h2:focus { outline: none; }
+.v3-tool-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 16px 0; }
+.v3-tool-shortcuts > .agc-button { min-width: 0; }
+.v3-tool-shortcuts > .agc-button > .button { width: 100%; height: 54px; min-height: 54px; padding: 12px 8px; gap: 8px; border: 1px solid var(--border-color); border-radius: 16px; background: white; color: #1b1f23; font-family: var(--ads-font-family-americansans-var), Arial, sans-serif; font-size: 14px; line-height: 20px; font-weight: 700; font-variation-settings: 'wght' 700; white-space: nowrap; }
+.v3-tool-shortcuts .button:hover { background: var(--ads-color-light-bg-fill-hover); }
+[data-design-version='v3'] > main > .promotional-carousel { background: var(--ads-color-light-bg-surface-alt, #f9fafb); }
+.v3-search-dialog { position: fixed; inset: auto; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; border-radius: 0; overflow: hidden; background: white; color: #1b1f23; }
+.v3-search-dialog[open] { display: flex; flex-direction: column; }
+.v3-search-dialog::backdrop { background: transparent; }
+.v3-search-heading { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 8px; padding: 24px 16px 20px; }
+.v3-search-heading h2 { flex: 1; min-width: 0; }
+.v3-close-search { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 32px; height: 32px; margin-right: -4px; padding: 4px; border: 0; border-radius: 50%; background: transparent; color: var(--link-color); }
+.v3-close-search:hover { background: var(--ads-color-light-bg-fill-hover); }
+.v3-close-glyph { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 50%; }
+.v3-search-panel:not([hidden]) { display: flex; flex: 1; flex-direction: column; min-height: 0; padding-inline: 16px; overflow-y: auto; overscroll-behavior: contain; scroll-padding-bottom: 96px; }
+.v3-search-dialog .route-fields .swap-button .icon-only-content { width: 32px; height: 32px; }
+.v3-book-panel .travel-categories { height: 32px; flex-shrink: 0; padding-top: 0; }
+.v3-book-panel > form { display: flex; flex: 1; flex-direction: column; }
+.v3-book-panel .route-field { flex-shrink: 0; }
+.v3-book-panel .booking-affordance { display: none; }
+.v3-book-panel .booking-reveal, .v3-book-panel .booking-reveal-body { display: contents; }
+.v3-book-panel .search-options { display: flex; flex: 1; flex-direction: column; opacity: 1; transform: none; transition: none; }
+.v3-book-panel .search-options > :not(.search-flights-button) { flex-shrink: 0; }
+.v3-book-panel .payment-switcher { margin-top: 0; }
+.v3-book-panel .advanced-search { margin-top: 4px; }
+.v3-book-panel .search-options .search-flights-button, .v3-search-dialog .trip-lookup-submit { position: sticky; bottom: 0; z-index: 2; flex-shrink: 0; margin-top: auto; padding-block: 16px max(16px, env(safe-area-inset-bottom)); background: white; }
+.v3-search-dialog .trip-lookup { flex: 1; gap: 16px; padding-top: 0; }
+.v3-search-dialog .trip-lookup > :not(.trip-lookup-submit) { flex-shrink: 0; }
+.v3-search-dialog .trip-lookup-submit { order: 2; }
+.v3-search-dialog .trip-lookup .demo-result { order: 1; }
+.v3-search-dialog .trip-last-name-field .text-field-box { height: 52px; }
+.v3-search-dialog .trip-identifier-field .text-field-box { height: 56px; }
+.v3-search-dialog .text-field[data-raised='false'] input { font-size: 16px; }
+.v3-search-dialog .trip-date-picker .aileron-date-input__wrapper { height: 64px; min-height: 64px; }
+.v3-search-dialog .trip-lookup-submit .button { height: 48px; min-height: 48px; border-radius: 16px; }
+/* ADS measures hidden inputs at mount; use content sizing when a saved panel opens. */
+.v3-search-dialog .date-field .aileron-date-input__input:placeholder-shown { width: 6.5ch !important; }
+@supports (field-sizing: content) {
+  .v3-search-dialog .date-field .aileron-date-input__input { width: auto !important; field-sizing: content; }
+}
+@container phone-viewport (width < 360px) {
+  .v3-tool-shortcuts > .agc-button > .button { gap: 4px; padding-inline: 6px; font-size: 12px; }
+  .v3-search-heading { padding-top: 16px; }
+  .v3-search-heading h2 { font-size: 15px; }
+}
